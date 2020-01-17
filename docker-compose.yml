@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  postgres:
+    build: .
+    ports:
+      - "5432:5432"
+    volumes:
+      - "./postgresql.conf:/etc/postgresql/10/main/postgresql.conf"
+      - "./pg_hba.conf:/etc/postgresql/10/main/pg_hba.conf"
